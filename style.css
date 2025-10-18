@@ -1,0 +1,127 @@
+body {
+    background-color: #f6dce6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding-top: 2rem;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+.card-title {
+    color: #983459;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.form-step h4 {
+    font-weight: 600;
+    color: #9e5973;
+    margin-bottom: 1.5rem;
+}
+
+.form-control,
+.form-control-file {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    border-color: #651337;
+    box-shadow: 0 0 0 0.2rem rgba(226, 43, 150, 0.25);
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #651337;
+    border-color: #651337;
+}
+
+.btn-primary:hover {
+    background-color: #e7458b;
+    border-color: #651337;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #651337;
+    border-color: #e60968;
+}
+
+.btn-secondary:hover {
+    background-color: #651337;
+    border-color: #d52a74;
+}
+
+.btn-success {
+    background-color: #651337;
+    border-color: #d52a74;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 15px;
+}
+
+.progress-bar {
+    background-color: #8a2be2;
+    font-weight: 500;
+}
+
+#summary p {
+    margin-bottom: 0.5rem;
+}
+
+#summary h5 {
+    font-weight: 600;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(255, 0, 153, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.badge-info {
+    color: #fff;
+    background-color: #8a2be2;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.navbar .nav-item.active .nav-link {
+    font-weight: 700;
+    color: #fff;
+}

@@ -1,0 +1,110 @@
+[
+    {
+        "ticket_number": "LAPT-2025101868f38866e9963",
+        "service_date": "2025-10-17",
+        "visit_time": "09:00-12:00",
+        "laptop_brand": "axioo",
+        "damage_description": "Battery drop",
+        "customer_name": "Desti",
+        "customer_phone": "089506892023",
+        "customer_address": "Tasikmalaya",
+        "uploaded_files": [
+            "uploads\/68f38866e8724-X.png"
+        ],
+        "status": "Booking Diajukan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    },
+    {
+        "ticket_number": "LAPT-2025101868f38917cb602",
+        "service_date": "2025-10-21",
+        "visit_time": "09:00-12:00",
+        "laptop_brand": "axioo",
+        "damage_description": "Battery Drop",
+        "customer_name": "Desti",
+        "customer_phone": "089506892023",
+        "customer_address": "Tasik",
+        "uploaded_files": [
+            "uploads\/68f38917caf1d-X.png"
+        ],
+        "status": "Booking Diajukan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    },
+    {
+        "ticket_number": "LAPT-2025101868f38e089a6cb",
+        "service_date": "2025-10-24",
+        "visit_time": "13:00-16:00",
+        "laptop_brand": "axioo",
+        "damage_description": "srga",
+        "customer_name": "Desti",
+        "customer_phone": "089506892023",
+        "customer_address": "Ggg",
+        "uploaded_files": [
+            "uploads\/68f38e089880b-X.png"
+        ],
+        "status": "Booking Diajukan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    },
+    {
+        "ticket_number": "LAPT-2025101868f38f4265a0c",
+        "service_date": "2025-10-03",
+        "visit_time": "13:00-16:00",
+        "laptop_brand": "axioo",
+        "damage_description": "fgag",
+        "customer_name": "Desti",
+        "customer_phone": "089506892023",
+        "customer_address": "gagagag",
+        "uploaded_files": [
+            "uploads\/68f38f42655ec-Y.png"
+        ],
+        "status": "Booking Diajukan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    },
+    {
+        "ticket_number": "LAPT-2025101868f38ff94a0d6",
+        "service_date": "2025-10-03",
+        "visit_time": "09:00-12:00",
+        "laptop_brand": "axioo",
+        "damage_description": "wTHEE",
+        "customer_name": "ED",
+        "customer_phone": "DR",
+        "customer_address": "SDGH",
+        "uploaded_files": [
+            "uploads\/68f38ff949bdd-SPEED.png"
+        ],
+        "status": "Booking Diajukan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    },
+    {
+        "ticket_number": "LAPT-2025101868f392f4ee466",
+        "service_date": "2025-10-16",
+        "visit_time": "09:00-12:00",
+        "laptop_brand": "axioo",
+        "damage_description": "hsjdfjkajkfh",
+        "customer_name": "Desti",
+        "customer_phone": "089506892023",
+        "customer_address": "Tasik",
+        "uploaded_files": [
+            "uploads\/68f392f4ee0a3-Y.png"
+        ],
+        "status": "Booking Diajukan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    }
+]
