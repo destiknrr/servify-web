@@ -11,8 +11,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <li class="nav-item <?php echo ($current_page == 'dashboard.php') ? 'active' : ''; ?>">
                 <a class="nav-link" href="dashboard.php">Dashboard</a>
             </li>
-            <li class="nav-item <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">
-                <a class="nav-link" href="index.php">Booking</a>
+            <li class="nav-item <?php echo ($current_page == 'form_booking.php') ? 'active' : ''; ?>">
+                <a class="nav-link" href="form_booking.php">Booking</a>
             </li>
         </ul>
     </div>

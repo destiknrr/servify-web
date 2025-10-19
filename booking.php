@@ -63,4 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: status.php?ticket=' . $ticket_number);
     exit;
 }
+ else {
+    // Redirect to the booking form if accessed directly
+    header('Location: form_booking.php');
+    exit;
+}
 ?>

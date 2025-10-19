@@ -66,9 +66,9 @@ if (!empty($ticket_number) && file_exists('data/bookings.json')) {
                             <h4 class="text-right">TOTAL HARGA: <?php echo !empty($booking_data['total_price']) ? htmlspecialchars($booking_data['total_price']) : '-'; ?></h4>
 
                             <div class="mt-4 text-center">
-                                <button class="btn btn-success">SAYA SETUJU & LANJUTKAN PROSES SERVIS</button>
-                                <button class="btn btn-danger">TOLAK & AMBIL KEMBALI LAPTOP</button>
-                            </div>
+                                <button class="btn btn-success my-2">SAYA SETUJU & LANJUTKAN PROSES SERVIS</button>
+                                <button class="btn btn-danger my-2">TOLAK & AMBIL KEMBALI LAPTOP</button>
+                            </div> 
 
                         <?php else: ?>
                             <h2 class="card-title text-center">Tiket Tidak Ditemukan</h2>

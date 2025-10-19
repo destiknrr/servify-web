@@ -26,7 +26,7 @@ if (file_exists('data/bookings.json')) {
                 <div class="card mt-5">
                     <div class="card-body">
                         <h2 class="card-title">Dashboard</h2>
-                        <a href="index.php" class="btn btn-primary mb-3">Tambah Booking Baru</a>
+                        <a href="form_booking.php" class="btn btn-primary mb-3">Tambah Booking Baru</a>
                         <table class="table table-striped">
                             <thead>
                                 <tr>
