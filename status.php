@@ -1,4 +1,26 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $ticket_number = isset($_POST['ticket']) ? $_POST['ticket'] : '';
+    $action = isset($_POST['action']) ? $_POST['action'] : '';
+
+    if (!empty($ticket_number) && !empty($action) && file_exists('data/bookings.json')) {
+        $bookings = json_decode(file_get_contents('data/bookings.json'), true);
+        foreach ($bookings as &$booking) {
+            if ($booking['ticket_number'] === $ticket_number) {
+                if ($action === 'approve') {
+                    $booking['status'] = 'Proses Pengerjaan';
+                } elseif ($action === 'reject') {
+                    $booking['status'] = 'Dibatalkan';
+                }
+                break;
+            }
+        }
+        file_put_contents('data/bookings.json', json_encode($bookings, JSON_PRETTY_PRINT));
+        header('Location: status.php?ticket=' . $ticket_number);
+        exit;
+    }
+}
+
 $ticket_number = isset($_GET['ticket']) ? $_GET['ticket'] : '';
 $booking_data = null;
 
@@ -45,6 +67,22 @@ if (!empty($ticket_number) && file_exists('data/bookings.json')) {
                                 <div class="progress-bar" role="progressbar" style="width: <?php echo $progress_percentage; ?>%;" aria-valuenow="<?php echo $progress_percentage; ?>" aria-valuemin="0" aria-valuemax="100"><?php echo htmlspecialchars($booking_data['status']); ?></div>
                             </div>
 
+                            <hr>
+                            <h5>Ringkasan Pengajuan Anda</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Nama Pelanggan:</strong><br><?php echo htmlspecialchars($booking_data['customer_name']); ?></p>
+                                    <p><strong>Nomor HP:</strong><br><?php echo htmlspecialchars($booking_data['customer_phone']); ?></p>
+                                    <p><strong>Alamat:</strong><br><?php echo htmlspecialchars($booking_data['customer_address']); ?></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Merk & Model Laptop:</strong><br><?php echo htmlspecialchars($booking_data['laptop_brand']); ?></p>
+                                    <p><strong>Deskripsi Kerusakan:</strong><br><?php echo htmlspecialchars($booking_data['damage_description']); ?></p>
+                                    <p><strong>Jadwal Kunjungan:</strong><br><?php echo htmlspecialchars($booking_data['service_date']); ?> (<?php echo htmlspecialchars($booking_data['visit_time']); ?>)</p>
+                                </div>
+                            </div>
+                            <hr>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <h5>Detail Diagnosis Teknisi</h5>
@@ -66,8 +104,11 @@ if (!empty($ticket_number) && file_exists('data/bookings.json')) {
                             <h4 class="text-right">TOTAL HARGA: <?php echo !empty($booking_data['total_price']) ? htmlspecialchars($booking_data['total_price']) : '-'; ?></h4>
 
                             <div class="mt-4 text-center">
-                                <button class="btn btn-success my-2">SAYA SETUJU & LANJUTKAN PROSES SERVIS</button>
-                                <button class="btn btn-danger my-2">TOLAK & AMBIL KEMBALI LAPTOP</button>
+                                <form method="POST" action="status.php">
+                                    <input type="hidden" name="ticket" value="<?php echo htmlspecialchars($booking_data['ticket_number']); ?>">
+                                    <button type="submit" name="action" value="approve" class="btn btn-success my-2">SAYA SETUJU & LANJUTKAN PROSES SERVIS</button>
+                                    <button type="submit" name="action" value="reject" class="btn btn-danger my-2">TOLAK & AMBIL KEMBALI LAPTOP</button>
+                                </form>
                             </div> 
 
                         <?php else: ?>
