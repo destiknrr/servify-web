@@ -1,0 +1,20 @@
+[
+    {
+        "ticket_number": "LAPT-2025101968f4e099782d7",
+        "service_date": "2025-10-29",
+        "visit_time": "09:00-12:00",
+        "laptop_brand": "Asus",
+        "damage_description": "Battery Drop",
+        "customer_name": "Resti",
+        "customer_phone": "089765667677",
+        "customer_address": "Ciamis",
+        "uploaded_files": [
+            "uploads\/68f4e09978062-Untitled diagram-2025-10-13-151502.png"
+        ],
+        "status": "Proses Pengerjaan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
+    }
+]

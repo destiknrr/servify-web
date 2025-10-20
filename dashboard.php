@@ -22,43 +22,61 @@ if (file_exists('data/bookings.json')) {
 
     <div class="container">
         <div class="row">
+            <div class="col-12">
+                <div class="card-promotion text-center">
+                    <h2 class="font-weight-bold">Laptop Bermasalah? Servify Siap Membantu!</h2>
+                    <p class="lead">Jangan biarkan laptop rusak mengganggu aktivitas Anda. Tim profesional kami siap datang ke lokasi Anda untuk perbaikan cepat dan terpercaya.</p>
+                    <a href="form_booking.php" class="btn btn-primary btn-lg cta-button">+ Ajukan Servis Sekarang</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-12">
-                <div class="card mt-5">
+                <div class="card mt-4">
                     <div class="card-body">
-                        <h2 class="card-title">Dashboard</h2>
-                        <a href="form_booking.php" class="btn btn-primary mb-3">Tambah Booking Baru</a>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Ticket Number</th>
-                                    <th>Customer Name</th>
-                                    <th>Laptop Brand</th>
-                                    <th>Service Date</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php if (!empty($bookings)): ?>
-                                    <?php foreach (array_reverse($bookings) as $booking): ?>
-                                        <tr>
-                                            <td><?php echo htmlspecialchars($booking['ticket_number']); ?></td>
-                                            <td><?php echo htmlspecialchars($booking['customer_name']); ?></td>
-                                            <td><?php echo htmlspecialchars($booking['laptop_brand']); ?></td>
-                                            <td><?php echo htmlspecialchars($booking['service_date']); ?></td>
-                                            <td><span class="badge badge-info"><?php echo htmlspecialchars($booking['status']); ?></span></td>
-                                            <td>
-                                                <a href="status.php?ticket=<?php echo htmlspecialchars($booking['ticket_number']); ?>" class="btn btn-sm btn-info">View</a>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                <?php else: ?>
+                        <h2 class="card-title">Riwayat Servis Anda</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
                                     <tr>
-                                        <td colspan="6" class="text-center">No bookings found.</td>
+                                        <th>ID Booking</th>
+                                        <th>Tanggal Pengajuan</th>
+                                        <th>Jadwal Kunjungan</th>
+                                        <th>Deskripsi Kerusakan</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
                                     </tr>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    <?php if (!empty($bookings)): ?>
+                                        <?php foreach (array_reverse($bookings) as $booking): ?>
+                                            <?php
+                                                // Ekstrak tanggal dari ticket_number (format: LAPT-YYYYMMDDXXXX)
+                                                $submissionDate = 'N/A';
+                                                if (preg_match('/LAPT-(\d{4})(\d{2})(\d{2})/', $booking['ticket_number'], $matches)) {
+                                                    $submissionDate = $matches[3] . '-' . $matches[2] . '-' . $matches[1];
+                                                }
+                                            ?>
+                                            <tr>
+                                                <td><?php echo htmlspecialchars($booking['ticket_number']); ?></td>
+                                                <td><?php echo $submissionDate; ?></td>
+                                                <td><?php echo htmlspecialchars($booking['service_date'] . ' (' . $booking['visit_time'] . ')'); ?></td>
+                                                <td><?php echo htmlspecialchars($booking['damage_description']); ?></td>
+                                                <td><span class="badge badge-info"><?php echo htmlspecialchars($booking['status']); ?></span></td>
+                                                <td>
+                                                    <a href="status.php?ticket=<?php echo htmlspecialchars($booking['ticket_number']); ?>" class="btn btn-sm btn-info">Lihat Detail</a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td colspan="6" class="text-center">Anda belum pernah mengajukan servis.</td>
+                                        </tr>
+                                    <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

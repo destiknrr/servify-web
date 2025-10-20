@@ -121,6 +121,33 @@ body {
     font-weight: 600;
 }
 
+.card-promotion {
+    background: linear-gradient(135deg, #ffebf2, #fce2ea);
+    border-radius: 15px;
+    padding: 2.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f0c1d1;
+}
+
+.card-promotion h2 {
+    color: #8c2c52;
+}
+
+.card-promotion .lead {
+    color: #a15270;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    box-shadow: 0 4px 10px rgba(101, 19, 55, 0.2);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
 .navbar .nav-item.active .nav-link {
     font-weight: 700;
     color: #fff;
