@@ -25,7 +25,7 @@ if (file_exists('data/bookings.json')) {
             <div class="col-12">
                 <div class="card-promotion text-center">
                     <h2 class="font-weight-bold">Laptop Bermasalah? Servify Siap Membantu!</h2>
-                    <p class="lead">Jangan biarkan laptop rusak mengganggu aktivitas Anda. Tim profesional kami siap datang ke lokasi Anda untuk perbaikan cepat dan terpercaya.</p>
+                    <p class="lead">Jangan biarkan laptop rusak mengganggu aktivitas Anda. Tim profesional kami siap membantu untuk perbaikan cepat dan terpercaya.</p>
                     <a href="form_booking.php" class="btn btn-primary btn-lg cta-button">+ Ajukan Servis Sekarang</a>
                 </div>
             </div>

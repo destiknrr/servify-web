@@ -16,5 +16,23 @@
         "estimated_completion": "",
         "service_cost": "",
         "total_price": ""
+    },
+    {
+        "ticket_number": "LAPT-2025102068f5fcf3b91f3",
+        "service_date": "2025-10-25",
+        "visit_time": "09:00-12:00",
+        "laptop_brand": "Asus",
+        "damage_description": "yayayya",
+        "customer_name": "Resti",
+        "customer_phone": "089765667677",
+        "customer_address": "Gn Roay",
+        "uploaded_files": [
+            "uploads\/68f5fcf3b719b-Untitled diagram-2025-10-13-151502.png"
+        ],
+        "status": "Proses Pengerjaan",
+        "diagnosis": "",
+        "estimated_completion": "",
+        "service_cost": "",
+        "total_price": ""
     }
 ]
